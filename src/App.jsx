@@ -19,7 +19,7 @@ function App() {
       const itemExists = prevItems.find((item) => item.id === product.id)
 
       if(itemExists){
-        toast.success(`Quantidade do item ${product.name} atualizada!`)
+        toast.info(`Quantidade do item ${product.name} atualizada!`)
         return prevItems.map((item) => item.id === product.id ? {...item, quantity: item.quantity + quantity} : item)
       }
       else{
@@ -31,6 +31,13 @@ function App() {
 
   }
 
+  const handleUpdateCart = (product, quantity) => {
+    toast.info(`Quantidade do item ${product.name} atualizada!`)
+    setCartItems((prevItems) => {
+      return prevItems.map(item => item.id === product.id ? {...item, quantity: +quantity} : item)
+    })
+  }
+
   return (
     <BrowserRouter>
       <nav>
@@ -40,7 +47,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Catalog onAddToCart={handleAddCart}/>}></Route>
-          <Route path="/cart" element={<Cart cartItems={cartItems}/>}></Route>
+          <Route path="/cart" element={<Cart cartItems={cartItems} onUpdateCart={handleUpdateCart}/>}></Route>
           <Route path="/thank-you" element={<ThankYouPage/>}></Route>
 
         </Routes>
