@@ -1,9 +1,29 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { useState } from 'react'
 import Catalog from './components/Catalog'
 import Cart from './components/Cart'
 import ThankYouPage from './components/ThankYouPage'
 
+
 function App() {
+
+  const [cartItem, setCartItems] = useState([])
+
+  const handleAddCart = (product, quantity) => {
+
+    setCartItems((prevItems) => {
+      const itemExists = prevItems.find((item) => item.id === product.id)
+
+      if(itemExists){
+        return prevItems.map((item) => item.id === product.id ? {...item, quantity: item.quantity + quantity} : item)
+      }
+      else{
+        return [...prevItems, {...product, quantity}]
+      }
+
+    })
+
+  }
 
   return (
     <BrowserRouter>
@@ -13,8 +33,8 @@ function App() {
       </nav>
       <div className="container">
         <Routes>
-          <Route path="/" element={<Catalog/>}></Route>
-          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/" element={<Catalog onAddToCart={handleAddCart}/>}></Route>
+          <Route path="/cart" element={<Cart cartItems={cartItems}/>}></Route>
           <Route path="/thank-you" element={<ThankYouPage/>}></Route>
 
         </Routes>
