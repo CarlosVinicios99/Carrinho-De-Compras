@@ -4,10 +4,14 @@ import Catalog from './components/Catalog'
 import Cart from './components/Cart'
 import ThankYouPage from './components/ThankYouPage'
 
+import { ToastContainer, toast } from 'react-toastify'
+
+import "react-toastify/dist/ReactToastify.css"
+
 
 function App() {
 
-  const [cartItem, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState([])
 
   const handleAddCart = (product, quantity) => {
 
@@ -15,9 +19,11 @@ function App() {
       const itemExists = prevItems.find((item) => item.id === product.id)
 
       if(itemExists){
+        toast.success(`Quantidade do item ${product.name} atualizada!`)
         return prevItems.map((item) => item.id === product.id ? {...item, quantity: item.quantity + quantity} : item)
       }
       else{
+        toast.success(`${product.name} Adicionado com sucesso!`)
         return [...prevItems, {...product, quantity}]
       }
 
@@ -39,6 +45,14 @@ function App() {
 
         </Routes>
       </div>
+      <ToastContainer
+        position='top-center'
+        autoClose={3000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnFocusLoss
+        pauseOnHover
+      />
     </BrowserRouter>
   )
 }
