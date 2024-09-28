@@ -14,6 +14,7 @@ const Cart = ({cartItems, onUpdateCart }) => {
                     }
                 </>
             )}
+            
         </div>
     )
 }
