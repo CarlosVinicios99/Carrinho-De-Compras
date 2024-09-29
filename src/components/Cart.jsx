@@ -1,7 +1,8 @@
 import React from 'react'
 import CartItem from './CartItem'
+import CheckoutButton from './CheckoutButton'
 
-const Cart = ({cartItems, onUpdateCart }) => {
+const Cart = ({cartItems, onUpdateCart, onRemoveFromCart }) => {
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
 
@@ -12,13 +13,14 @@ const Cart = ({cartItems, onUpdateCart }) => {
                 <>
                     {
                         cartItems.map((item) => (
-                            <CartItem key={item.id} item={item} onUpdateCart={onUpdateCart}/>
+                            <CartItem key={item.id} item={item} onUpdateCart={onUpdateCart} onRemoveFromCart={onRemoveFromCart}/>
                         ))
                     }
                 </>
             )}
             <div className="total">
                 <p>Total: ${totalPrice.toFixed(2)}</p>
+                <CheckoutButton/>
             </div>
         </div>
     )

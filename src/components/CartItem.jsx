@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CartItem = ({item, onUpdateCart}) => {
+const CartItem = ({item, onUpdateCart, onRemoveFromCart}) => {
 
     return (
         <div className="cart-item">
@@ -8,7 +8,7 @@ const CartItem = ({item, onUpdateCart}) => {
             <p>${item.price}</p>
             <div className="cart-buttons">
                 <input type="text" value={item.quantity} onChange={(e) => onUpdateCart(item, parseInt(e.target.value))}/>
-                <button>Remover</button>
+                <button onClick={(e) => onRemoveFromCart(item)}>Remover</button>
             </div>
         </div>
     )
