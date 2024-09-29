@@ -1,38 +1,38 @@
 [
     {
       "id": 1,
-      "name": "Rel\u00f3gio Elegante",
+      "name": "Rel\u00f3gio de Pulso",
       "price": 50.99,
-      "image": "https://source.unsplash.com/featured/?watch"
+      "image": "https://github.com/CarlosVinicios99/Lista-De-Tarefas-Com-React/blob/main/imagens/relogio-de-pulso.png?raw=true"
     },
     {
       "id": 2,
-      "name": "C\u00e2mera Vintage",
+      "name": "C\u00e2mera Fotográfica",
       "price": 85.5,
-      "image": "https://source.unsplash.com/featured/?camera"
+      "image": "https://github.com/CarlosVinicios99/Lista-De-Tarefas-Com-React/blob/main/imagens/camera-fotografica.jpeg?raw=true"
     },
     {
       "id": 3,
       "name": "Fones de Ouvido",
       "price": 35.99,
-      "image": "https://source.unsplash.com/featured/?headphones"
+      "image": "https://raw.githubusercontent.com/CarlosVinicios99/Lista-De-Tarefas-Com-React/refs/heads/main/imagens/fones-de-ouvido.webp"
     },
     {
       "id": 4,
       "name": "T\u00eanis de Corrida",
       "price": 120.0,
-      "image": "https://source.unsplash.com/featured/?sneakers"
+      "image": "https://github.com/CarlosVinicios99/Lista-De-Tarefas-Com-React/blob/main/imagens/tenis-de-corrida.jpg?raw=true"
     },
     {
       "id": 5,
       "name": "Smartphone",
       "price": 299.99,
-      "image": "https://source.unsplash.com/featured/?smartphone"
+      "image": "https://raw.githubusercontent.com/CarlosVinicios99/Lista-De-Tarefas-Com-React/refs/heads/main/imagens/smartphone.webp"
     },
     {
       "id": 6,
-      "name": "Livro de Aventura",
+      "name": "Livro de Culinária",
       "price": 19.99,
-      "image": "https://source.unsplash.com/featured/?book"
+      "image": "https://github.com/CarlosVinicios99/Lista-De-Tarefas-Com-React/blob/main/imagens/livro-de-culinaria.jpg?raw=true"
     }
   ]
