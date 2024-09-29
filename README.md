@@ -1,8 +1,6 @@
-# React + Vite
+# Carrinho De Compras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>Neste projeto é desenvolvido um catálogo de produtos com as demais funcionalidades comuns em um e-commerce, como a adição de um produto ao carrinho, atualização da quantidade, remoção de produto e finalização de compra.</p>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionamento
+<img src="https://github.com/CarlosVinicios99/Carrinho-De-Compras/blob/main/catalogo-de-produtos.jpg?raw=true" alt="">
